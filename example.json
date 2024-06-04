@@ -1,0 +1,12 @@
+{
+    "uri": "https://vulnerable.example.com/admin/user-records",
+    "cookies": "example=cookie; example2=cookie2",
+    "referer": "https://vulnerable.example.com/admin/",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+    "origin": "https://vulnerable.example.com",
+    "localstorage": {},
+    "sessionstorage": {},
+    "dom": "<html><head></head><body><!-- Example HTML --></body></html>",
+    "payload": "//xss.example.com/",
+    "screenshot": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABjElEQVQ4jZ2Tz0vDUBiGn"
+}
